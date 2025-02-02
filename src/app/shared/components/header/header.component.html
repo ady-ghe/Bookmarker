@@ -1,0 +1,16 @@
+<div class="header">
+  <a class="logo" routerLink="/bookmarks">Bookmarker</a>
+  <div *ngIf="showPlusIcon" class="search-container">
+    <mat-form-field  appearance="outline" class="search-input">
+      <mat-icon matPrefix>search</mat-icon>
+      <mat-label>Filter Bookmarks...</mat-label>
+      <input matInput #searchInput (keyup)="filterBookmarks(searchInput.value)">
+    </mat-form-field>
+  </div>
+  <button *ngIf="showPlusIcon"
+          mat-icon-button color="warn"
+          [routerLink]="['/bookmarks/create']"
+          matTooltip="Add new bookmark">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

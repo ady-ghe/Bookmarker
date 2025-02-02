@@ -1,0 +1,63 @@
+@use 'variables' as *;
+
+h2 {
+  margin: 20px 0;
+  color: $bright-gray;
+  font-size: $font-size-header;
+}
+
+.bookmarks-container {
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.bookmark-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $white-smoke;
+    margin: 10px 0;
+    padding: 5px 0;
+    .icon {
+      width: 70px;
+      color: $bright-gray;
+    }
+
+    &:hover {
+      background-color: $white-smoke;
+    }
+
+    .bookmark-details {
+      font-size: $font-size-content;
+      flex: 1;
+    }
+
+    .bookmark-actions {
+      margin-left: 12px;
+      mat-icon {
+        color: $bright-gray;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.no-data {
+  text-align: center;
+  color: $error;
+  font-size: $font-size-header;
+  mat-icon {
+    color: $error;
+    position: relative;
+    top: 6px;
+  }
+}
+
+
+::ng-deep .mat-mdc-icon-button:hover .mat-mdc-button-persistent-ripple::before {
+  background: none;
+}

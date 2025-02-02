@@ -1,0 +1,29 @@
+<div class="form-container mat-elevation-z8">
+  <div class="header">
+    <span class="title"><mat-icon class="icon-display">bookmark</mat-icon> Edit Bookmark</span>
+    <span class="subtitle">Type the bookmark name and the url</span>
+  </div>
+  <form [formGroup]="bookmarkForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <mat-form-field class="name" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field class="url" appearance="outline" matTooltip="http://www.example.com">
+        <mat-label>URL</mat-label>
+        <input matInput formControlName="url" />
+      </mat-form-field>
+    </div>
+
+    <div class="button-group">
+      <button mat-raised-button color="primary" type="submit" [disabled]="bookmarkForm.invalid">
+        Update bookmark
+      </button>
+      <button mat-raised-button color="warn" routerLink="/bookmarks">
+        Cancel
+      </button>
+    </div>
+
+  </form>
+</div>

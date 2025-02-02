@@ -1,0 +1,64 @@
+{
+  "bookmarks": [
+    {
+      "id": "1",
+      "name": "Angular",
+      "url": "https://angular.io",
+      "createdAt": "2023-08-15T12:34:56Z"
+    },
+    {
+      "id": "2",
+      "name": "React",
+      "url": "https://reactjs.org",
+      "createdAt": "2022-06-05T08:23:45Z"
+    },
+    {
+      "id": "3",
+      "name": "Vue.js",
+      "url": "https://vuejs.org",
+      "createdAt": "2025-02-01T16:05:30Z"
+    },
+    {
+      "id": "4",
+      "name": "Svelte",
+      "url": "https://svelte.dev",
+      "createdAt": "2023-03-12T09:45:12Z"
+    },
+    {
+      "id": "5",
+      "name": "Bootstrap",
+      "url": "https://getbootstrap.com",
+      "createdAt": "2020-12-25T07:12:34Z"
+    },
+    {
+      "id": "6",
+      "name": "Tailwind CSS",
+      "url": "https://tailwindcss.com",
+      "createdAt": "2023-07-01T13:47:21Z"
+    },
+    {
+      "id": "7",
+      "name": "Material-UI",
+      "url": "https://mui.com",
+      "createdAt": "2022-02-14T18:30:00Z"
+    },
+    {
+      "id": "8",
+      "name": "Ant Design",
+      "url": "https://ant.design",
+      "createdAt": "2021-09-09T11:11:11Z"
+    },
+    {
+      "id": "9",
+      "name": "RxJS",
+      "url": "https://rxjs.dev",
+      "createdAt": "2022-07-10T11:30:00Z"
+    },
+    {
+      "id": "10",
+      "name": "NgRx",
+      "url": "https://ngrx.io",
+      "createdAt": "2021-08-20T14:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<div class="bookmarks-container">
+  <div *ngIf="groupedBookmarks.today.length">
+    <h2>Today</h2>
+    <ul class="bookmark-list">
+      <li class="row" *ngFor="let bookmark of groupedBookmarks.today">
+        <ng-container *ngTemplateOutlet="bookmarkItem; context: { item: bookmark }"></ng-container>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="groupedBookmarks.yesterday.length">
+    <h2>Yesterday</h2>
+    <ul class="bookmark-list">
+      <li class="row" *ngFor="let bookmark of groupedBookmarks.yesterday">
+        <ng-container *ngTemplateOutlet="bookmarkItem; context: { item: bookmark }"></ng-container>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="groupedBookmarks.older.length">
+    <h2>Older</h2>
+    <ul class="bookmark-list">
+      <li class="row" *ngFor="let bookmark of groupedBookmarks.older">
+        <ng-container *ngTemplateOutlet="bookmarkItem; context: { item: bookmark }"></ng-container>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="noBookmarks" class="no-data">
+    <mat-icon>search_off</mat-icon>
+    No bookmarks found!
+  </div>
+
+  <ng-template #bookmarkItem let-item="item">
+    <div class="icon">
+      <mat-icon>bookmark</mat-icon>
+    </div>
+    <div class="bookmark-details">
+      <strong>{{ item.name }}</strong><br />
+      <a [href]="item.url" target="_blank">{{ item.url }}</a><br />
+      <small>Created: {{ item.createdAt | date:'short' }}</small>
+    </div>
+    <div class="bookmark-actions" matTooltip="Click to edit bookmark">
+      <button mat-icon-button color="accent" [routerLink]="['/bookmarks/edit', item.id]">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </ng-template>
+</div>
