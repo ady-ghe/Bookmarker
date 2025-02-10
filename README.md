@@ -4,7 +4,14 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## JSON Server
 
-The Project needs JSON Server to have dummy data. Start it with:
+The Project needs JSON Server to have dummy data. 
+To install it:
+
+```bash
+npm install -g json-server
+```
+
+To start the Json Server:
 
 ```bash
     json-server --watch db.json --port 3000
